@@ -6,11 +6,20 @@ namespace ThanosCoinPlugin
 {
     using EventManager = PluginAPI.Events.EventManager;
 
+    /// <summary>
+    /// Defines plugin functionality
+    /// </summary>
     public class Plugin
     {
+        /// <summary>
+        /// Stores plugin configuration
+        /// </summary>
         [PluginConfig]
         public Config PluginConfig;
 
+        /// <summary>
+        /// Loads and initializes the plugin
+        /// </summary>
         [PluginPriority(LoadPriority.Medium)]
         [PluginEntryPoint("Thanos Coin Plugin", "1.0.0", "Perfectly balanced plugin", "Adam Szerszenowicz")]
         void LoadPlugin()
@@ -20,6 +29,11 @@ namespace ThanosCoinPlugin
             PrintLog("Plugin is loaded.");
         }
 
+        /// <summary>
+        /// Called when player flips the coin
+        /// </summary>
+        /// <param name="player">Player which thrown the coin</param>
+        /// <param name="isTails">True if coin landed on tails, false otherwise</param>
         [PluginEvent(ServerEventType.PlayerCoinFlip)]
         void OnPlayerCoinFlip(Player player, bool isTails)
         {
@@ -32,6 +46,10 @@ namespace ThanosCoinPlugin
             PrintLog($"{player.DisplayNickname} got balanced."); 
         }
 
+        /// <summary>
+        /// Prints an info message to server log
+        /// </summary>
+        /// <param name="message">Message to print</param>
         private static void PrintLog(string message) => Log.Info(message, "ThanosCoinPlugin: ");
     }
 }
