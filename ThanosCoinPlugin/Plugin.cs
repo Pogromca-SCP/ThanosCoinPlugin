@@ -28,12 +28,39 @@ namespace ThanosCoinPlugin
         /// Loads and initializes the plugin
         /// </summary>
         [PluginPriority(LoadPriority.Medium)]
-        [PluginEntryPoint("Thanos Coin Plugin", "1.0.0", "Perfectly balanced plugin", "Adam Szerszenowicz")]
+        [PluginEntryPoint("Thanos Coin Plugin", "1.1.0", "Perfectly balanced plugin", "Adam Szerszenowicz")]
         void LoadPlugin()
         {
             PrintLog("Plugin load started...");
             EventManager.RegisterEvents(this);
             PrintLog("Plugin is loaded.");
+        }
+
+        /// <summary>
+        /// Reloads the plugin
+        /// </summary>
+        [PluginReload]
+        void ReloadPlugin()
+        {
+            PrintLog("Plugin reload started...");
+            EventManager.UnregisterEvents(this);
+
+            var handler = PluginHandler.Get(this);
+            handler?.LoadConfig(this, "PluginConfig");
+
+            EventManager.RegisterEvents(this);
+            PrintLog("Plugin reloaded.");
+        }
+
+        /// <summary>
+        /// Unloads the plugin
+        /// </summary>
+        [PluginUnload]
+        void UnloadPlugin()
+        {
+            PrintLog("Plugin unload started...");
+            EventManager.UnregisterEvents(this);
+            PrintLog("Plugin is unloaded.");
         }
 
         /// <summary>
