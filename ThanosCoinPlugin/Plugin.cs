@@ -1,6 +1,7 @@
-﻿using PluginAPI.Core.Attributes;
+﻿using PluginAPI.Core;
+using PluginAPI.Core.Attributes;
 using PluginAPI.Enums;
-using PluginAPI.Core;
+using System.Threading.Tasks;
 
 namespace ThanosCoinPlugin
 {
@@ -11,6 +12,12 @@ namespace ThanosCoinPlugin
     /// </summary>
     public class Plugin
     {
+        /// <summary>
+        /// Prints an info message to server log
+        /// </summary>
+        /// <param name="message">Message to print</param>
+        private static void PrintLog(string message) => Log.Info(message, "ThanosCoinPlugin: ");
+
         /// <summary>
         /// Stores plugin configuration
         /// </summary>
@@ -37,19 +44,19 @@ namespace ThanosCoinPlugin
         [PluginEvent(ServerEventType.PlayerCoinFlip)]
         void OnPlayerCoinFlip(Player player, bool isTails)
         {
-            if (player is null || player.IsGodModeEnabled || PluginConfig is null || PluginConfig.CoinKillOnTails != isTails)
+            if (player is null || PluginConfig is null || PluginConfig.CoinKillOnTails != isTails)
             {
                 return;
             }
 
-            player.Kill(PluginConfig.BalanceReason ?? string.Empty);
-            PrintLog($"{player.DisplayNickname} got balanced."); 
-        }
+            async void KillPlayerAsync()
+            {
+                await Task.Delay(3400);
+                player.Kill(PluginConfig.BalanceReason ?? string.Empty);
+                PrintLog($"{player.DisplayNickname} got balanced.");
+            }
 
-        /// <summary>
-        /// Prints an info message to server log
-        /// </summary>
-        /// <param name="message">Message to print</param>
-        private static void PrintLog(string message) => Log.Info(message, "ThanosCoinPlugin: ");
+            KillPlayerAsync();
+        }
     }
 }
