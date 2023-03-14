@@ -28,7 +28,7 @@ namespace ThanosCoinPlugin
         /// Loads and initializes the plugin
         /// </summary>
         [PluginPriority(LoadPriority.Medium)]
-        [PluginEntryPoint("Thanos Coin Plugin", "1.2.0", "Perfectly balanced plugin", "Adam Szerszenowicz")]
+        [PluginEntryPoint("Thanos Coin Plugin", "1.2.1", "Perfectly balanced plugin", "Adam Szerszenowicz")]
         void LoadPlugin()
         {
             PrintLog("Plugin load started...");
@@ -58,6 +58,7 @@ namespace ThanosCoinPlugin
         {
             PrintLog("Plugin unload started...");
             EventManager.UnregisterEvents(this);
+            PluginConfig = null;
             PrintLog("Plugin is unloaded.");
         }
 
@@ -67,21 +68,16 @@ namespace ThanosCoinPlugin
         /// <param name="player">Player which thrown the coin</param>
         /// <param name="isTails">True if coin landed on tails, false otherwise</param>
         [PluginEvent(ServerEventType.PlayerCoinFlip)]
-        void OnPlayerCoinFlip(Player player, bool isTails)
+        async void OnPlayerCoinFlip(Player player, bool isTails)
         {
             if (player is null || PluginConfig is null || PluginConfig.CoinKillOnTails != isTails)
             {
                 return;
             }
 
-            async void KillPlayerAsync()
-            {
-                await Task.Delay(3400);
-                player.Kill(PluginConfig.BalanceReason ?? string.Empty);
-                PrintLog($"{player.DisplayNickname} got balanced.");
-            }
-
-            KillPlayerAsync();
+            await Task.Delay(3400);
+            player.Kill(PluginConfig.BalanceReason ?? string.Empty);
+            PrintLog($"{player.DisplayNickname} got balanced.");
         }
 
         /// <summary>
@@ -89,6 +85,11 @@ namespace ThanosCoinPlugin
         /// </summary>
         private void ReloadConfig()
         {
+            if (PluginConfig is null)
+            {
+                PluginConfig = new Config();
+            }
+
             var handler = PluginHandler.Get(this);
             handler?.LoadConfig(this, nameof(PluginConfig));
         }
