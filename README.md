@@ -10,4 +10,4 @@ Simply put plugin `.dll` file inside your server's plugins folder.
 |Name|Type|Default value|Description|
 |---|---|---|---|
 |coin_kill_on_tails|bool|true|Set to true if players should be killed when coin lands on tails.|
-|balance_reason|string|ThanosCoin.exefalse|Death reason to display on death screen and body inspection.|
+|balance_reason|string|ThanosCoin.exe|Death reason to display on death screen and body inspection.|
