@@ -76,7 +76,7 @@ namespace ThanosCoinPlugin
             }
 
             await Task.Delay(3400);
-            player.Kill(PluginConfig.BalanceReason ?? string.Empty);
+            player.Kill(PluginConfig?.BalanceReason ?? string.Empty);
             PrintLog($"{player.DisplayNickname} got balanced.");
         }
 
