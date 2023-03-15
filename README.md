@@ -12,7 +12,7 @@ This plugin was created using [official Northwood Plugin API](https://github.com
 Simply put plugin `.dll` file inside your server's plugins folder.
 
 ## Configuration
-|Name|Type|Default value|Description|
-|---|---|---|---|
-|coin_kill_on_tails|bool|true|Set to true if players should be killed when coin lands on tails.|
-|balance_reason|string|ThanosCoin.exe|Death reason to display on death screen and body inspection.|
+| Name               | Type   | Default value  | Description                                                       |
+|--------------------|--------|----------------|-------------------------------------------------------------------|
+| coin_kill_on_tails | bool   | true           | Set to true if players should be killed when coin lands on tails. |
+| balance_reason     | string | ThanosCoin.exe | Death reason to display on death screen and body inspection.      |
