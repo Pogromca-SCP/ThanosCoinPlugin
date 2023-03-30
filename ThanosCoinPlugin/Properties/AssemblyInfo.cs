@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("ThanosCoinPlugin")]
-[assembly: AssemblyCopyright("Copyright © 2023")]
+[assembly: AssemblyCopyright("Copyright © 2023 Adam Szerszenowicz")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
