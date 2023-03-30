@@ -1,5 +1,5 @@
 # ThanosCoinPlugin
-[![GitHub latest release](https://flat.badgen.net/github/release/Pogromca-SCP/ThanosCoinPlugin)](https://github.com/Pogromca-SCP/ThanosCoinPlugin/releases/latest)
+[![GitHub release](https://flat.badgen.net/github/release/Pogromca-SCP/ThanosCoinPlugin)](https://github.com/Pogromca-SCP/ThanosCoinPlugin/releases)
 [![GitHub license](https://flat.badgen.net/github/license/Pogromca-SCP/ThanosCoinPlugin)](https://github.com/Pogromca-SCP/ThanosCoinPlugin/blob/main/LICENSE)
 ![GitHub downloads](https://flat.badgen.net/github/assets-dl/Pogromca-SCP/ThanosCoinPlugin)
 ![GitHub last commit](https://flat.badgen.net/github/last-commit/Pogromca-SCP/ThanosCoinPlugin/main)
