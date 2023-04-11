@@ -8,24 +8,24 @@ namespace ThanosCoinPlugin
     using EventManager = PluginAPI.Events.EventManager;
 
     /// <summary>
-    /// Defines plugin functionality
+    /// Defines plugin functionality.
     /// </summary>
     public class Plugin
     {
         /// <summary>
-        /// Prints an info message to server log
+        /// Prints an info message to server log.
         /// </summary>
-        /// <param name="message">Message to print</param>
+        /// <param name="message">Message to print.</param>
         private static void PrintLog(string message) => Log.Info(message, "ThanosCoinPlugin: ");
 
         /// <summary>
-        /// Stores plugin configuration
+        /// Stores plugin configuration.
         /// </summary>
         [PluginConfig]
         public Config PluginConfig;
 
         /// <summary>
-        /// Loads and initializes the plugin
+        /// Loads and initializes the plugin.
         /// </summary>
         [PluginPriority(LoadPriority.Medium)]
         [PluginEntryPoint("Thanos Coin Plugin", "1.2.1", "Perfectly balanced plugin", "Adam Szerszenowicz")]
@@ -38,7 +38,7 @@ namespace ThanosCoinPlugin
         }
 
         /// <summary>
-        /// Reloads the plugin
+        /// Reloads the plugin.
         /// </summary>
         [PluginReload]
         void ReloadPlugin()
@@ -51,7 +51,7 @@ namespace ThanosCoinPlugin
         }
 
         /// <summary>
-        /// Unloads the plugin
+        /// Unloads the plugin.
         /// </summary>
         [PluginUnload]
         void UnloadPlugin()
@@ -63,10 +63,10 @@ namespace ThanosCoinPlugin
         }
 
         /// <summary>
-        /// Called when player flips the coin
+        /// Called when player flips the coin.
         /// </summary>
-        /// <param name="player">Player which thrown the coin</param>
-        /// <param name="isTails">True if coin landed on tails, false otherwise</param>
+        /// <param name="player">Player which thrown the coin.</param>
+        /// <param name="isTails"><see langword="true"/> if coin landed on tails, <see langword="false"/> otherwise.</param>
         [PluginEvent(ServerEventType.PlayerCoinFlip)]
         async void OnPlayerCoinFlip(Player player, bool isTails)
         {
@@ -81,7 +81,7 @@ namespace ThanosCoinPlugin
         }
 
         /// <summary>
-        /// Reloads plugin config values
+        /// Reloads plugin config values.
         /// </summary>
         private void ReloadConfig()
         {
