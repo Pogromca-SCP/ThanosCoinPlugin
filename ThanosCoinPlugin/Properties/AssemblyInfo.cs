@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("ThanosCoinPlugin")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Perfectly balanced plugin.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Adam Szerszenowicz")]
 [assembly: AssemblyProduct("ThanosCoinPlugin")]
-[assembly: AssemblyCopyright("Copyright © 2023 Adam Szerszenowicz")]
+[assembly: AssemblyCopyright("Copyright © 2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
