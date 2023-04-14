@@ -12,6 +12,10 @@ namespace ThanosCoinPlugin
     /// </summary>
     public class Plugin
     {
+        public const string PluginVersion = "1.2.1";
+        public const string PluginDescription = "Perfectly balanced plugin.";
+        public const string PluginAuthor = "Adam Szerszenowicz";
+
         /// <summary>
         /// Prints an info message to server log.
         /// </summary>
@@ -28,7 +32,7 @@ namespace ThanosCoinPlugin
         /// Loads and initializes the plugin.
         /// </summary>
         [PluginPriority(LoadPriority.Medium)]
-        [PluginEntryPoint("Thanos Coin Plugin", "1.2.1", "Perfectly balanced plugin", "Adam Szerszenowicz")]
+        [PluginEntryPoint("Thanos Coin Plugin", PluginVersion, PluginDescription, PluginAuthor)]
         void LoadPlugin()
         {
             PrintLog("Plugin load started...");
