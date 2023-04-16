@@ -6,4 +6,4 @@
 | < 2.0.0 | :x:                |
 
 ## Reporting a Vulnerability
-To report a vulnerability, please open a new [Issue](https://github.com/Pogromca-SCP/ThanosCoinPlugin/issues/new).
+Please report all vulnerabilities in the issues section with label `vulnerability`.
