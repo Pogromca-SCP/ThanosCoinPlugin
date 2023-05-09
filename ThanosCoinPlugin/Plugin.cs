@@ -12,7 +12,7 @@ namespace ThanosCoinPlugin
     /// </summary>
     public class Plugin
     {
-        public const string PluginVersion = "2.0.0";
+        public const string PluginVersion = "2.1.0";
         public const string PluginDescription = "Perfectly balanced plugin.";
         public const string PluginAuthor = "Adam Szerszenowicz";
 
@@ -89,11 +89,6 @@ namespace ThanosCoinPlugin
         /// </summary>
         private void ReloadConfig()
         {
-            if (PluginConfig is null)
-            {
-                PluginConfig = new Config();
-            }
-
             var handler = PluginHandler.Get(this);
             handler?.LoadConfig(this, nameof(PluginConfig));
         }
