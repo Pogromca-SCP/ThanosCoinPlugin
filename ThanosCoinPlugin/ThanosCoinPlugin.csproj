@@ -7,7 +7,6 @@
 		<AssemblyName>ThanosCoinPlugin</AssemblyName>
 		<RootNamespace>ThanosCoinPlugin</RootNamespace>
 		<LangVersion>10</LangVersion>
-		<Nullable>enable</Nullable>
 		<GenerateAssemblyInfo>False</GenerateAssemblyInfo>
 		<Configurations>Release</Configurations>
 		<Platforms>AnyCPU</Platforms>

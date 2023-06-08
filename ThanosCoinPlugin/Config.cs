@@ -17,5 +17,5 @@ public class Config
     /// Death reason to display on death screen and body inspection.
     /// </summary>
     [Description("Death reason to display on death screen and body inspection")]
-    public string? BalanceReason { get; set; } = "ThanosCoin.exe";
+    public string BalanceReason { get; set; } = "ThanosCoin.exe";
 }

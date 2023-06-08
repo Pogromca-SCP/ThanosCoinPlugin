@@ -25,7 +25,7 @@ public class Plugin
     /// Stores plugin configuration.
     /// </summary>
     [PluginConfig]
-    public Config? PluginConfig;
+    public Config PluginConfig;
 
     /// <summary>
     /// Loads and initializes the plugin.
@@ -71,7 +71,7 @@ public class Plugin
     /// <param name="player">Player which thrown the coin.</param>
     /// <param name="isTails"><see langword="true"/> if coin landed on tails, <see langword="false"/> otherwise.</param>
     [PluginEvent(ServerEventType.PlayerCoinFlip)]
-    async void OnPlayerCoinFlip(Player? player, bool isTails)
+    async void OnPlayerCoinFlip(Player player, bool isTails)
     {
         if (player is null || PluginConfig is null || PluginConfig.CoinKillOnTails != isTails)
         {
