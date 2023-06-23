@@ -3,6 +3,7 @@
 [![GitHub license](https://flat.badgen.net/github/license/Pogromca-SCP/ThanosCoinPlugin)](https://github.com/Pogromca-SCP/ThanosCoinPlugin/blob/main/LICENSE)
 ![GitHub downloads](https://flat.badgen.net/github/assets-dl/Pogromca-SCP/ThanosCoinPlugin)
 ![GitHub last commit](https://flat.badgen.net/github/last-commit/Pogromca-SCP/ThanosCoinPlugin/main)
+![GitHub checks](https://flat.badgen.net/github/checks/Pogromca-SCP/ThanosCoinPlugin/main)
 
 Perfectly balanced plugin for SCP: Secret Laboratory. Every coin flip has 50% chance to kill the player. Are you ready to test your luck?
  
