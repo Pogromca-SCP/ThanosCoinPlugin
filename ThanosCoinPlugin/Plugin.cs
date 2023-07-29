@@ -1,8 +1,8 @@
 ﻿using PluginAPI.Core;
+using System.Threading.Tasks;
 using PluginAPI.Core.Attributes;
 using PluginAPI.Enums;
 using PluginAPI.Events;
-using System.Threading.Tasks;
 
 namespace ThanosCoinPlugin;
 
@@ -11,7 +11,7 @@ namespace ThanosCoinPlugin;
 /// </summary>
 public class Plugin
 {
-    public const string PluginVersion = "2.1.0";
+    public const string PluginVersion = "2.2.0";
     public const string PluginDescription = "Perfectly balanced plugin.";
     public const string PluginAuthor = "Adam Szerszenowicz";
 
@@ -20,6 +20,18 @@ public class Plugin
     /// </summary>
     /// <param name="message">Message to print.</param>
     private static void PrintLog(string message) => Log.Info(message, "ThanosCoinPlugin: ");
+
+    /// <summary>
+    /// Kills a player after a short delay.
+    /// </summary>
+    /// <param name="player">Player to kill.</param>
+    /// <param name="reason">Death reason to display.</param>
+    private static async void KillPlayer(Player player, string reason)
+    {
+        await Task.Delay(3400);
+        player.Kill(reason);
+        PrintLog($"{player.DisplayNickname} got balanced.");
+    }
 
     /// <summary>
     /// Stores plugin configuration.
@@ -71,16 +83,12 @@ public class Plugin
     /// <param name="player">Player which thrown the coin.</param>
     /// <param name="isTails"><see langword="true"/> if coin landed on tails, <see langword="false"/> otherwise.</param>
     [PluginEvent(ServerEventType.PlayerCoinFlip)]
-    async void OnPlayerCoinFlip(Player player, bool isTails)
+    void OnPlayerCoinFlip(Player player, bool isTails)
     {
-        if (player is null || PluginConfig is null || PluginConfig.CoinKillOnTails != isTails)
+        if (PluginConfig is not null && PluginConfig.CoinKillOnTails == isTails)
         {
-            return;
+            KillPlayer(player, PluginConfig.BalanceReason ?? string.Empty);
         }
-
-        await Task.Delay(3400);
-        player.Kill(PluginConfig?.BalanceReason ?? string.Empty);
-        PrintLog($"{player.DisplayNickname} got balanced.");
     }
 
     /// <summary>
