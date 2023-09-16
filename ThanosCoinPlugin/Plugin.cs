@@ -11,7 +11,7 @@ namespace ThanosCoinPlugin;
 /// </summary>
 public class Plugin
 {
-    public const string PluginVersion = "2.2.0";
+    public const string PluginVersion = "3.0.0";
     public const string PluginDescription = "Perfectly balanced plugin.";
     public const string PluginAuthor = "Adam Szerszenowicz";
 

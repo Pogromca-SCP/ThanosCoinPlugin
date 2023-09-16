@@ -8,9 +8,9 @@ namespace ThanosCoinPlugin;
 public class Config
 {
     /// <summary>
-    /// Set to <see langword="true" /> if players should be killed when coin lands on tails.
+    /// Set to <see langword="true" /> if players should be killed when coin lands on tails instead of heads.
     /// </summary>
-    [Description("Set to true if players should be killed when coin lands on tails")]
+    [Description("Set to true if players should be killed when coin lands on tails instead of heads")]
     public bool CoinKillOnTails { get; set; } = true;
 
     /// <summary>
