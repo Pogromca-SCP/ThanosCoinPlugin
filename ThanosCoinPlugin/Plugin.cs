@@ -80,14 +80,13 @@ public class Plugin
     /// <summary>
     /// Called when player flips the coin.
     /// </summary>
-    /// <param name="player">Player which thrown the coin.</param>
-    /// <param name="isTails"><see langword="true"/> if coin landed on tails, <see langword="false"/> otherwise.</param>
+    /// <param name="args">Contains event arguments.</param>
     [PluginEvent(ServerEventType.PlayerCoinFlip)]
-    void OnPlayerCoinFlip(Player player, bool isTails)
+    void OnPlayerCoinFlip(PlayerCoinFlipEvent args)
     {
-        if (PluginConfig is not null && PluginConfig.CoinKillOnTails == isTails)
+        if (PluginConfig is not null && PluginConfig.CoinKillOnTails == args.IsTails)
         {
-            KillPlayer(player, PluginConfig.BalanceReason ?? string.Empty);
+            KillPlayer(args.Player, PluginConfig.BalanceReason ?? string.Empty);
         }
     }
 
