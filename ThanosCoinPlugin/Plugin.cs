@@ -26,7 +26,7 @@ public class Plugin
     /// </summary>
     /// <param name="player">Player to kill.</param>
     /// <param name="reason">Death reason to display.</param>
-    private static async void KillPlayer(Player player, string reason)
+    private static async void KillPlayerAsync(Player player, string reason)
     {
         await Task.Delay(3400);
         player.Kill(reason);
@@ -86,7 +86,7 @@ public class Plugin
     {
         if (PluginConfig is not null && PluginConfig.CoinKillOnTails == args.IsTails)
         {
-            KillPlayer(args.Player, PluginConfig.BalanceReason ?? string.Empty);
+            KillPlayerAsync(args.Player, PluginConfig.BalanceReason ?? string.Empty);
         }
     }
 
