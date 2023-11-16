@@ -1,8 +1,8 @@
 ﻿using PluginAPI.Core;
-using System.Threading.Tasks;
 using PluginAPI.Core.Attributes;
 using PluginAPI.Enums;
 using PluginAPI.Events;
+using System.Threading.Tasks;
 
 namespace ThanosCoinPlugin;
 
