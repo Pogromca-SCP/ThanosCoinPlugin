@@ -8,19 +8,3 @@
 Perfectly balanced plugin for SCP: Secret Laboratory. Every coin flip has 50% chance to kill the player. Are you ready to test your luck?
  
 This plugin was created using [official Northwood Plugin API](https://github.com/northwood-studios/NwPluginAPI). No additional dependencies need to be installed in order to run it.
- 
-## Installation
-### Automatic
-1. Run `p install Pogromca-SCP/ThanosCoinPlugin` in the server console.
-2. Restart the server.
-
-### Manual
-1. Download `ThanosCoinPlugin.dll` file from [latest release](https://github.com/Pogromca-SCP/ThanosCoinPlugin/releases/latest).
-2. Place downloaded file in your server's plugins folder `{ServerDirectory}/PluginAPI/plugins/{port|global}`.
-3. Restart the server.
-
-## Configuration
-| Name               | Type   | Default value  | Description                                                                        |
-| ------------------ | ------ | -------------- | ---------------------------------------------------------------------------------- |
-| coin_kill_on_tails | bool   | true           | Set to true if players should be killed when coin lands on tails instead of heads. |
-| balance_reason     | string | ThanosCoin.exe | Death reason to display on death screen and body inspection.                       |
