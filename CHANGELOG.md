@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Upgraded project to C# 12.
+- Upgraded project to [NwPluginAPI v13.1.2](https://github.com/northwood-studios/NwPluginAPI/releases/tag/13.1.2).
 
 ## [3.0.0] - 2023-09-16
 

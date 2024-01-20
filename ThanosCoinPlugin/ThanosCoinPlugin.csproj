@@ -12,6 +12,6 @@
 		<Platforms>AnyCPU</Platforms>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="Northwood.PluginAPI" Version="13.1.1" />
+		<PackageReference Include="Northwood.PluginAPI" Version="13.1.2" />
 	</ItemGroup>
 </Project>
