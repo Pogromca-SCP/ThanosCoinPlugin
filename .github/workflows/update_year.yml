@@ -19,3 +19,4 @@ jobs:
           path: |
             LICENSE
             */Properties/AssemblyInfo.cs
+          transform: (?<=[Cc]opyright.*)(?<from>\d{4})?
