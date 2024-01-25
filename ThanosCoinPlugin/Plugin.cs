@@ -14,7 +14,7 @@ public class Plugin
     /// <summary>
     /// Contains current plugin version.
     /// </summary>
-    public const string PluginVersion = "3.0.0";
+    public const string PluginVersion = "3.1.0";
 
     /// <summary>
     /// Contains plugin description.
@@ -37,7 +37,8 @@ public class Plugin
     /// </summary>
     /// <param name="player">Player to kill.</param>
     /// <param name="reason">Death reason to display.</param>
-    private static async void KillPlayerAsync(Player player, string reason)
+    /// <returns>Task representing async operation.</returns>
+    private static async Task KillPlayerAsync(Player player, string reason)
     {
         await Task.Delay(3400);
         player.Kill(reason);
@@ -97,7 +98,7 @@ public class Plugin
     {
         if (PluginConfig is not null && PluginConfig.CoinKillOnTails == args.IsTails)
         {
-            KillPlayerAsync(args.Player, PluginConfig.BalanceReason ?? string.Empty);
+            _ = KillPlayerAsync(args.Player, PluginConfig.BalanceReason ?? string.Empty);
         }
     }
 
