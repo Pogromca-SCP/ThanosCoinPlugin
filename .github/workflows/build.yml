@@ -17,14 +17,8 @@ jobs:
       with:
         dotnet-version: 8.0.x
         
-    - name: Restore NuGet packages
-      run: dotnet restore
-      
-    - name: Build project
-      run: dotnet build --no-restore --configuration Release
-      
-    - name: Upload artifacts
-      uses: actions/upload-artifact@v4
-      with: 
-        name: ThanosCoinPlugin
-        path: ${{ github.workspace }}/ThanosCoinPlugin/bin/Release/net48/ThanosCoinPlugin.dll
+    - name: Build and upload artifacts
+      uses: Pogromca-SCP/build-nwapi-plugin@v1.0.0
+      with:
+        plugin-name: ThanosCoinPlugin
+        run-tests: false
