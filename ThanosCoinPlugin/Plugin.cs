@@ -56,7 +56,7 @@ public class Plugin
     /// </summary>
     [PluginPriority(LoadPriority.Medium)]
     [PluginEntryPoint("Thanos Coin Plugin", PluginVersion, PluginDescription, PluginAuthor)]
-    void LoadPlugin()
+    private void LoadPlugin()
     {
         PrintLog("Plugin load started...");
         ReloadConfig();
@@ -68,7 +68,7 @@ public class Plugin
     /// Reloads the plugin.
     /// </summary>
     [PluginReload]
-    void ReloadPlugin()
+    private void ReloadPlugin()
     {
         PrintLog("Plugin reload started...");
         EventManager.UnregisterEvents(this);
@@ -81,7 +81,7 @@ public class Plugin
     /// Unloads the plugin.
     /// </summary>
     [PluginUnload]
-    void UnloadPlugin()
+    private void UnloadPlugin()
     {
         PrintLog("Plugin unload started...");
         EventManager.UnregisterEvents(this);
@@ -94,7 +94,7 @@ public class Plugin
     /// </summary>
     /// <param name="args">Contains event arguments.</param>
     [PluginEvent(ServerEventType.PlayerCoinFlip)]
-    void OnPlayerCoinFlip(PlayerCoinFlipEvent args)
+    private void OnPlayerCoinFlip(PlayerCoinFlipEvent args)
     {
         if (PluginConfig is not null && PluginConfig.CoinKillOnTails == args.IsTails)
         {
