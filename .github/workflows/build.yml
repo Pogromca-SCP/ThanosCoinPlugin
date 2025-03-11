@@ -21,4 +21,5 @@ jobs:
       uses: Pogromca-SCP/build-nwapi-plugin@v2
       with:
         plugin-name: ThanosCoinPlugin
+        refs-variable: SL_REFERENCES
         run-tests: false
