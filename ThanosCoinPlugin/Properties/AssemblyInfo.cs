@@ -1,10 +1,9 @@
 using System.Reflection;
-using ThanosCoinPlugin;
 
-[assembly: AssemblyTitle("ThanosCoinPlugin")]
-[assembly: AssemblyDescription(Plugin.PluginDescription)]
-[assembly: AssemblyProduct("ThanosCoinPlugin")]
-[assembly: AssemblyCopyright("Copyright © 2022-present " + Plugin.PluginAuthor)]
-[assembly: AssemblyVersion(Plugin.PluginVersion)]
-[assembly: AssemblyFileVersion(Plugin.PluginVersion)]
-[assembly: AssemblyInformationalVersion(Plugin.PluginVersion)]
+[assembly: AssemblyTitle(ThanosCoinPlugin.ThanosCoinPlugin.PluginName)]
+[assembly: AssemblyDescription(ThanosCoinPlugin.ThanosCoinPlugin.PluginDescription)]
+[assembly: AssemblyProduct(ThanosCoinPlugin.ThanosCoinPlugin.PluginName)]
+[assembly: AssemblyCopyright("Copyright © 2022-present " + ThanosCoinPlugin.ThanosCoinPlugin.PluginAuthor)]
+[assembly: AssemblyVersion(ThanosCoinPlugin.ThanosCoinPlugin.PluginVersion)]
+[assembly: AssemblyFileVersion(ThanosCoinPlugin.ThanosCoinPlugin.PluginVersion)]
+[assembly: AssemblyInformationalVersion(ThanosCoinPlugin.ThanosCoinPlugin.PluginVersion)]
