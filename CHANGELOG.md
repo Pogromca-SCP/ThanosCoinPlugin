@@ -7,9 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.0.0] - 2025-05-19
+
 ### Changed
 
-- Project now uses NwPluginAPI assembly directly from game files to use more up to date API.
+- Upgraded project to [LabAPI v1.0.2](https://github.com/northwood-studios/LabAPI/releases/tag/1.0.2).
 
 ## [3.1.0] - 2024-06-10
 
