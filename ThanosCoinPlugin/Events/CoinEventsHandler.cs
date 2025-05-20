@@ -14,12 +14,12 @@ public class CoinEventsHandler(ThanosCoinPlugin? plugin) : CustomEventsHandler
     /// <summary>
     /// Contains reference to plugin object for access to config object.
     /// </summary>
-    private readonly ThanosCoinPlugin _plugin = plugin ?? new();
+    private readonly ThanosCoinPlugin? _plugin = plugin;
 
     /// <inheritdoc />
     public override void OnPlayerFlippedCoin(PlayerFlippedCoinEventArgs args)
     {
-        var config = _plugin.Config;
+        var config = _plugin?.Config;
 
         if (config is null || config.CoinKillOnTails != args.IsTails)
         {
