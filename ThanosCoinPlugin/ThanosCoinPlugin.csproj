@@ -6,7 +6,7 @@
 		<OutputType>Library</OutputType>
 		<AssemblyName>ThanosCoinPlugin</AssemblyName>
 		<RootNamespace>ThanosCoinPlugin</RootNamespace>
-		<LangVersion>12</LangVersion>
+		<LangVersion>14</LangVersion>
 		<Nullable>enable</Nullable>
 		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 		<Configurations>Release</Configurations>
