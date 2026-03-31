@@ -7,9 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### [5.0.0] - 2026-03-31
+
 ### Changed
 
-- Upgraded project to [LabAPI v1.1.4](https://github.com/northwood-studios/LabAPI/releases/tag/1.1.4).
+- Upgraded project to [LabAPI v1.1.6](https://github.com/northwood-studios/LabAPI/releases/tag/1.1.6).
+- Required LabAPI version check now uses a predefined constant.
 
 ## [4.0.0] - 2025-05-19
 

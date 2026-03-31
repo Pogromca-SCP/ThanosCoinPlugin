@@ -1,5 +1,4 @@
 using LabApi.Events.CustomHandlers;
-using LabApi.Features;
 using LabApi.Features.Console;
 using LabApi.Loader.Features.Plugins;
 using System;
@@ -20,7 +19,7 @@ public class ThanosCoinPlugin : Plugin<Config>
     /// <summary>
     /// Contains current plugin version.
     /// </summary>
-    public const string PluginVersion = "4.0.0";
+    public const string PluginVersion = "5.0.0";
 
     /// <summary>
     /// Contains plugin description.
@@ -31,6 +30,11 @@ public class ThanosCoinPlugin : Plugin<Config>
     /// Contains plugin author.
     /// </summary>
     public const string PluginAuthor = "Adam Szerszenowicz";
+
+    /// <summary>
+    /// Contains minimal LabAPI version required by this plugin.
+    /// </summary>
+    public const string RequiredVersion = "1.1.6";
 
     /// <inheritdoc />
     public override string Name { get; } = PluginName;
@@ -45,7 +49,7 @@ public class ThanosCoinPlugin : Plugin<Config>
     public override Version Version { get; } = new(PluginVersion);
 
     /// <inheritdoc />
-    public override Version RequiredApiVersion { get; } = new(LabApiProperties.CompiledVersion);
+    public override Version RequiredApiVersion { get; } = new(RequiredVersion);
 
     /// <summary>
     /// Contains a reference to coin events handler.
